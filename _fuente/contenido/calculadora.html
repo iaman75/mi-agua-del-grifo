@@ -1,0 +1,110 @@
+<!--path: calculadora-dureza-agua.html-->
+<!--title: Calculadora de dureza del agua: convierte ºf, ºdH y mg/L | Mi Agua del Grifo-->
+<!--desc: Convierte la dureza del agua entre grados franceses, alemanes, mg/L de CaCO3 y mmol/L, descubre si tu agua es blanda o dura y calcula qué descalcificador necesitas.-->
+<!--tipo: articulo-->
+<!--fecha: 2026-11-26-->
+
+<article class="articulo">
+<div class="migas"><a href="index.html">Inicio</a> › Calculadora de dureza</div>
+<h1>Calculadora de dureza del agua</h1>
+<p class="meta">Actualizado el 26 de noviembre de 2026 · Por Ismael</p>
+
+<div class="resumen"><strong>Para qué sirve</strong>
+<ul>
+<li>Pasa la dureza de tu agua de una unidad a otra (la factura, el análisis y el manual del lavavajillas suelen usar unidades distintas).</li>
+<li>Te dice si tu agua es blanda, medianamente dura, dura o muy dura.</li>
+<li>Calcula, de forma orientativa, el tamaño de descalcificador que necesita tu casa.</li>
+</ul></div>
+
+<section class="calc" id="conversor">
+<h2>1. Convierte la dureza y clasifica tu agua</h2>
+<div class="campos">
+<div class="campo"><label for="valor">Valor de dureza</label><input id="valor" type="number" min="0" step="any" value="30" inputmode="decimal"></div>
+<div class="campo"><label for="unidad">Unidad</label>
+<select id="unidad">
+<option value="10">Grados franceses (ºf)</option>
+<option value="1">mg/L de CaCO₃ (= ppm)</option>
+<option value="17.848">Grados alemanes (ºdH)</option>
+<option value="14.254">Grados ingleses (ºe / Clark)</option>
+<option value="100.09">mmol/L</option>
+</select></div>
+</div>
+<div class="resultado" id="res1" aria-live="polite"></div>
+</section>
+
+<section class="calc" id="descalcificador">
+<h2>2. ¿Qué descalcificador necesito?</h2>
+<div class="campos">
+<div class="campo"><label for="dur">Dureza de tu agua (ºf)</label><input id="dur" type="number" min="0" step="any" value="35" inputmode="decimal"></div>
+<div class="campo"><label for="res">Dureza que quieres dejar (ºf)</label><input id="res" type="number" min="0" step="any" value="7" inputmode="decimal"></div>
+<div class="campo"><label for="per">Personas en casa</label><input id="per" type="number" min="1" step="1" value="3" inputmode="numeric"></div>
+<div class="campo"><label for="lpd">Litros por persona y día</label><input id="lpd" type="number" min="20" step="1" value="130" inputmode="numeric"></div>
+<div class="campo"><label for="dias">Días entre regeneraciones</label><input id="dias" type="number" min="1" step="1" value="7" inputmode="numeric"></div>
+</div>
+<div class="resultado" id="res2" aria-live="polite"></div>
+<p style="font-size:.9rem;color:var(--suave);margin-bottom:0">Cálculo orientativo: suponemos que cada litro de resina retiene unos 5 ºf·m³ y que gasta unos 150 g de sal por litro en cada regeneración, valores habituales en equipos domésticos. Comprueba siempre la ficha técnica del fabricante.</p>
+</section>
+
+<h2>Cómo se mide la dureza del agua</h2>
+<p>La dureza indica cuánto calcio y magnesio lleva disuelta el agua. Como hay varias formas de expresarla, la referencia común es el <strong>carbonato cálcico (CaCO₃)</strong>: se calcula cuánto CaCO₃ equivaldría a todo el calcio y el magnesio del agua y se da en miligramos por litro.</p>
+<p>En España lo más habitual son los <strong>grados franceses (ºf)</strong>. Un grado francés equivale a 10 mg/L de CaCO₃, así que un agua de 30 ºf tiene 300 mg/L. Los fabricantes alemanes de lavavajillas y cafeteras suelen usar <strong>grados alemanes (ºdH)</strong>, que son algo más grandes: 1 ºdH ≈ 1,78 ºf.</p>
+
+<div class="tabla-scroll"><table>
+<thead><tr><th>Unidad</th><th>Equivale a</th><th>Dónde la verás</th></tr></thead>
+<tbody>
+<tr><td>1 ºf (grado francés)</td><td>10 mg/L CaCO₃</td><td>Análisis municipales, OCU, descalcificadores</td></tr>
+<tr><td>1 ºdH (grado alemán)</td><td>17,85 mg/L CaCO₃ ≈ 1,78 ºf</td><td>Lavavajillas, cafeteras, tiras reactivas</td></tr>
+<tr><td>1 ºe (grado inglés)</td><td>14,25 mg/L CaCO₃ ≈ 1,43 ºf</td><td>Algunos equipos británicos</td></tr>
+<tr><td>1 mmol/L</td><td>100,09 mg/L CaCO₃ ≈ 10 ºf</td><td>Laboratorios, normativa europea</td></tr>
+<tr><td>1 ppm</td><td>1 mg/L CaCO₃</td><td>Medidores TDS y fichas técnicas</td></tr>
+</tbody></table></div>
+
+<h2>Escala de dureza que usamos</h2>
+<p>No existe una escala oficial única. Usamos la de la OCU porque es la más conocida en España:</p>
+<div class="escala">
+<div class="e1">Blanda<small>menos de 12 ºf</small></div>
+<div class="e2">Medianamente dura<small>12 – 30 ºf</small></div>
+<div class="e3">Dura<small>30 – 40 ºf</small></div>
+<div class="e4">Muy dura<small>más de 40 ºf</small></div>
+</div>
+
+<h2>Cómo leer el resultado del descalcificador</h2>
+<p>Un descalcificador de intercambio iónico tiene una resina que atrapa el calcio y el magnesio. Cuando se satura, se "regenera" con salmuera (agua con sal) y vuelve a funcionar. Su tamaño depende de tres cosas: lo dura que es tu agua, cuánta agua gastáis y cada cuántos días quieres que se regenere.</p>
+<p>No hace falta dejar el agua a 0 ºf. Un agua totalmente descalcificada es más agresiva con las tuberías metálicas, por eso los equipos llevan una válvula de mezcla para dejar una <strong>dureza residual</strong>, normalmente entre 5 y 10 ºf. Por eso la calculadora te pide ese dato.</p>
+<p>Si quieres entender mejor cuándo compensa instalar uno, lee nuestra guía <a href="descalcificador-merece-la-pena.html">¿Merece la pena un descalcificador?</a>.</p>
+
+<div class="fuentes"><strong>Fuentes:</strong> OCU, <a href="https://www.ocu.org/vivienda-y-energia/equipamiento-hogar/informe/dureza-del-agua" rel="nofollow noopener">Dureza del agua</a> (escala y conversión ºf). Las equivalencias entre unidades se calculan a partir de las masas molares del CaCO₃ (100,09 g/mol) y del CaO.</div>
+</article>
+
+<script>
+(function(){
+function $(i){return document.getElementById(i)}
+function n(x,d){return Number(x).toLocaleString("es-ES",{maximumFractionDigits:d===undefined?1:d})}
+function clase(f){
+ if(f<12)return["Blanda","#2aa5c9","Apenas deja cal. Es la mejor para electrodomésticos."];
+ if(f<30)return["Medianamente dura","#2b84b5","Deja algo de cal. Basta con usar abrillantador y sal en el lavavajillas."];
+ if(f<=40)return["Dura","#c2852b","Notarás cal en grifos, mampara y hervidor. Un descalcificador empieza a compensar."];
+ return["Muy dura","#b84c3c","Mucha cal: acorta la vida del termo y los electrodomésticos. Un descalcificador suele merecer la pena."];
+}
+function conv(){
+ var v=parseFloat($("valor").value),u=parseFloat($("unidad").value);
+ if(isNaN(v)||v<0){$("res1").innerHTML="Introduce un valor válido.";return}
+ var mg=v*u,f=mg/10,c=clase(f);
+ $("res1").innerHTML='<div class="grande">'+n(f)+' ºf</div><span class="chip" style="background:'+c[1]+'">'+c[0]+'</span><p style="margin:10px 0 0">'+c[2]+'</p>'+
+ '<div class="conv"><div><b>'+n(mg,0)+'</b><span>mg/L CaCO₃ (ppm)</span></div><div><b>'+n(mg/17.848)+'</b><span>ºdH (alemanes)</span></div><div><b>'+n(mg/14.254)+'</b><span>ºe (ingleses)</span></div><div><b>'+n(mg/100.09,2)+'</b><span>mmol/L</span></div></div>';
+}
+function desc(){
+ var d=parseFloat($("dur").value),r=parseFloat($("res").value),p=parseFloat($("per").value),l=parseFloat($("lpd").value),di=parseFloat($("dias").value);
+ if([d,r,p,l,di].some(function(x){return isNaN(x)||x<0})){$("res2").innerHTML="Revisa los datos.";return}
+ var ef=d-r;
+ if(ef<=0){$("res2").innerHTML="Tu agua ya está por debajo de la dureza que quieres dejar: no necesitas descalcificador.";return}
+ var m3dia=p*l/1000,cap=ef*m3dia*di,resina=cap/5,sal=resina*0.15,salMes=sal*30/di;
+ var tam=resina<=10?"pequeño (hasta 10 L de resina)":resina<=20?"mediano (10–20 L de resina)":resina<=30?"grande (20–30 L de resina)":"muy grande (más de 30 L): consulta a un instalador";
+ $("res2").innerHTML='<div class="grande">≈ '+n(Math.ceil(resina))+' litros de resina</div><p style="margin:6px 0 10px">Equipo '+tam+'.</p>'+
+ '<div class="conv"><div><b>'+n(m3dia*1000,0)+' L</b><span>consumo diario</span></div><div><b>'+n(cap,0)+'</b><span>capacidad necesaria (ºf·m³)</span></div><div><b>'+n(sal,1)+' kg</b><span>sal por regeneración</span></div><div><b>'+n(salMes,1)+' kg</b><span>sal al mes aprox.</span></div></div>';
+}
+["valor","unidad"].forEach(function(i){$(i).addEventListener("input",conv)});
+["dur","res","per","lpd","dias"].forEach(function(i){$(i).addEventListener("input",desc)});
+conv();desc();
+})();
+</script>

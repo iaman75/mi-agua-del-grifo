@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mi-agua-del-grifo.vercel.app/sitemap.xml
