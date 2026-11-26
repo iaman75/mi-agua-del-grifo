@@ -2,7 +2,7 @@
   --azul:#0b5d8c; --azul-osc:#073b5a; --azul-claro:#e8f3fa; --agua:#2aa5c9;
   --texto:#1d2730; --suave:#5b6b78; --borde:#dbe5ec; --fondo:#ffffff; --fondo2:#f6f9fb;
   --ok:#1f8a5b; --aviso:#b7791f; --mal:#b83c3c;
-  --radio:12px; --ancho:1080px; --lectura:720px;
+  --radio:12px; --ancho:1080px; --lectura:780px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -54,7 +54,8 @@ img{max-width:100%}
 .articulo h2{font-size:1.4rem;color:var(--azul-osc);margin:34px 0 10px}
 .articulo h3{font-size:1.15rem;margin:24px 0 6px}
 .resumen{background:var(--azul-claro);border-left:4px solid var(--azul);padding:16px 18px;border-radius:0 var(--radio) var(--radio) 0;margin:0 0 24px}
-.resumen strong{display:block;margin-bottom:4px;color:var(--azul-osc)}
+.resumen > strong{display:block;margin-bottom:4px;color:var(--azul-osc)}
+.resumen li strong{color:var(--azul-osc)}
 .resumen ul{margin:6px 0 0;padding-left:20px}
 .nota{background:#fff8eb;border:1px solid #f1dcb2;padding:14px 16px;border-radius:var(--radio);font-size:.95rem}
 table{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:.95rem}
@@ -96,3 +97,24 @@ th{background:var(--fondo2);color:var(--azul-osc)}
   .conv{grid-template-columns:repeat(2,1fr)}
   .hero{padding:36px 0 28px}
 }
+
+/* móvil: menú en una fila y tablas en tarjetas */
+@media(max-width:640px){
+  .menu{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:16px;padding-bottom:2px}
+  .menu::-webkit-scrollbar{display:none}
+  .menu a{white-space:nowrap;padding:6px 0}
+  .tabla-scroll{overflow:visible}
+  .tabla-scroll table,.tabla-scroll tbody,.tabla-scroll tr,.tabla-scroll td{display:block;width:100%}
+  .tabla-scroll thead{display:none}
+  .tabla-scroll tr{border:1px solid var(--borde);border-radius:10px;margin-bottom:10px;padding:8px 12px;background:#fff}
+  .tabla-scroll td{border:0;padding:4px 0}
+  .tabla-scroll td::before{content:attr(data-l);display:block;font-size:.75rem;font-weight:700;color:var(--suave);text-transform:uppercase;letter-spacing:.03em}
+  .tabla-scroll td:first-child{font-weight:700;color:var(--azul-osc)}
+  .tabla-scroll td:first-child::before{display:none}
+  .articulo{padding-top:24px}
+  .articulo h1{font-size:1.65rem}
+  .boton{padding:12px 18px}
+  .botones .boton{flex:1 1 auto;text-align:center}
+  .pie .contenedor{flex-direction:column}
+}
+@media(max-width:430px){.menu a[href="sobre-nosotros.html"]{display:none}}

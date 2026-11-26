@@ -72,6 +72,7 @@ Usamos cookies propias y de terceros (Google AdSense) para mostrar anuncios y an
 <div class="botones"><button class="boton" data-c="si">Aceptar</button><button class="boton sec" data-c="no">Rechazar</button></div>
 </div>
 <script>
+document.querySelectorAll('.tabla-scroll table').forEach(function(t){var h=[].map.call(t.querySelectorAll('thead th'),function(x){return x.textContent});t.querySelectorAll('tbody tr').forEach(function(r){[].forEach.call(r.children,function(td,i){if(h[i])td.setAttribute('data-l',h[i])})})});
 (function(){var k="cookies-ok",b=document.getElementById("cookies");var v=null;try{v=localStorage.getItem(k)}catch(e){}
 if(!v)b.style.display="block";b.querySelectorAll("button").forEach(function(x){x.onclick=function(){try{localStorage.setItem(k,x.dataset.c)}catch(e){}b.style.display="none"}})})();
 </script>
