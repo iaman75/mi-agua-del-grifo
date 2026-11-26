@@ -18,7 +18,7 @@ dict(slug="madrid",nombre="Madrid",prov="Madrid",
  lavav="Pon el nivel de dureza <strong>más bajo</strong> que permita tu lavavajillas (0–4 ºdH). Con agua tan blanda, si pones un nivel alto gastarás sal para nada.",
  desc_txt="<strong>No compensa.</strong> Con 0–5 ºf no hay cal que quitar. Si alguien te ofrece uno en Madrid, desconfía.",
  extra="<h3>Un detalle con agua muy blanda</h3><p>El agua muy blanda hace mucha espuma y cuesta aclarar el jabón. Puedes usar algo menos de detergente que lo que indica el envase para agua dura.</p>"),
-dict(slug="barcelona",nombre="Barcelona",prov="Barcelona",
+dict(slug="barcelona",nombre="Barcelona",prov="Barcelona",capitales=True,
  desc="¿El agua de Barcelona es dura? Dureza por zonas según el SINAC (2026): de 20 a 43 ºf. Qué poner en el lavavajillas y si compensa un descalcificador.",
  resumen=["En la zona principal (72 % de la población) el agua es <strong>medianamente dura: 26,7 ºf</strong>.","Hay una zona <strong>muy dura (42,7 ºf)</strong> que abastece a un 10 % y otra más suave (20,1 ºf) para un 9 %.","La cal se nota: en la mayor parte de la ciudad, pon unos <strong>15 ºdH</strong> en el lavavajillas."],
  gestor="Aigües de Barcelona",
@@ -116,6 +116,7 @@ for c in CITIES:
 {c["porque"]}
 <p>Si quieres entender la química de fondo, lo explicamos en <a href="que-es-la-dureza-del-agua.html">qué es la dureza del agua</a>.</p>
 
+{'<!--INC:capitales-->' if c.get('capitales') else ''}
 <h2>¿Se puede beber el agua del grifo en {n}?</h2>
 <p>{c["beber"]} La dureza no tiene límite sanitario en el Real Decreto 3/2023; lo explicamos en <a href="es-malo-beber-agua-dura.html">¿es malo beber agua dura?</a>.</p>
 

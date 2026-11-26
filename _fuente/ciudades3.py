@@ -1,5 +1,5 @@
 CITIES=[
-dict(slug="valencia",nombre="Valencia",prov="Valencia",
+dict(slug="valencia",nombre="Valencia",prov="Valencia",capitales=True,
  desc="¿El agua de Valencia es dura? Sí, muy dura: 42 ºf en la red que abastece al 95 % de la ciudad según el SINAC (2026). Por qué, y qué hacer con la cal.",
  resumen=["El agua de Valencia es <strong>muy dura</strong>: <strong>42,0 ºf</strong> en la red principal, que abastece al 95 % de la población.","En pedanías como El Saler, Pinedo o El Perellonet, y en Benimàmet, el último análisis da entre <strong>46 y 51 ºf</strong>.","Un <strong>descalcificador suele merecer la pena</strong>. En el lavavajillas, unos 24 ºdH o más."],
  gestor="Global Omnium (EMIVASA)",
