@@ -8,7 +8,7 @@ DOMINIO = "https://mi-agua-del-grifo.vercel.app"  # cámbialo cuando tengas domi
 
 LOGO = '''<svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C16 3 6 14.5 6 20.5a10 10 0 0 0 20 0C26 14.5 16 3 16 3z" fill="#2aa5c9"/><path d="M11.5 21a4.5 4.5 0 0 0 4.5 4.5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>'''
 
-MENU = [("index.html","Inicio"),("calculadora-dureza-agua.html","Calculadora"),("articulos.html","Artículos"),("sobre-nosotros.html","Sobre nosotros")]
+MENU = [("index.html","Inicio"),("calculadora-dureza-agua.html","Calculadora"),("articulos.html","Artículos"),("dureza-agua-por-ciudad.html","Ciudades"),("sobre-nosotros.html","Sobre nosotros")]
 
 def pagina(meta, cuerpo):
     ruta = meta["path"]
