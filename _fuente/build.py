@@ -28,7 +28,7 @@ def pagina(meta, cuerpo):
 <meta property="og:description" content="{meta["desc"]}">
 <meta property="og:type" content="{"article" if meta.get("tipo")=="articulo" else "website"}">
 <meta property="og:locale" content="es_ES">
-<meta property="og:image" content="{DOMINIO}/img/agua-grifo-vaso.webp">
+<meta property="og:image" content="{DOMINIO}/img/vaso-cocina-mediterranea.webp">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3C16 3 6 14.5 6 20.5a10 10 0 0 0 20 0C26 14.5 16 3 16 3z' fill='%232aa5c9'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="css/estilo.css">
 <meta name="google-adsense-account" content="ca-pub-3880195370765258">
