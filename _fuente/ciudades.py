@@ -79,6 +79,15 @@ for c in CITIES:
         dur=f"<strong>{ff(mg)} ºf</strong> ({mg} mg/L) · {cls(mg/10)}"
         rows+=f"<tr><td>{f[0]}</td>"+(f"<td>{f[3]}</td>" if has_pop else "")+f"<td>{dur}</td><td>{f[2]}</td></tr>\n"
     res="".join(f"<li>{x}</li>" for x in c["resumen"])
+    filas_g=[f for f in c["filas"] if f[1]>0] or c["filas"]
+    mxv=max(f[1] for f in c["filas"]); top=max(50,mxv/10*1.1)
+    grafica='<figure class="figura"><div class="barras">'
+    for f in c["filas"][:10]:
+        v=f[1]/10; cc="c1" if v<12 else "c2" if v<30 else "c3" if v<=40 else "c4"
+        nom=f[0].split(" (")[0]
+        grafica+=f'<div class="barra"><span>{nom}</span><div class="pista"><div class="relleno {cc}" style="width:{min(100,v/top*100):.1f}%">'+f"{v:.1f}".replace(".",",")+' ºf</div></div></div>'
+    grafica+='</div><div class="leyenda"><span><i class="c1"></i>Blanda</span><span><i class="c2"></i>Medianamente dura</span><span><i class="c3"></i>Dura</span><span><i class="c4"></i>Muy dura</span></div><figcaption>Dureza del último análisis de cada red, en grados franceses (ºf).</figcaption></figure>'
+
     html=f'''<!--path: dureza-agua-{s}.html-->
 <!--title: Dureza del agua en {n}: datos oficiales 2026 | Mi Agua del Grifo-->
 <!--desc: {c["desc"]}-->
@@ -101,6 +110,8 @@ for c in CITIES:
 {rows}</tbody></table></div>
 <p style="font-size:.9rem;color:var(--suave)">{c["nota_tabla"]} Consulta del 26/11/2026. 1 ºf = 10 mg/L de CaCO₃. Clasificación según la escala de la OCU.</p>
 
+{grafica}
+<!--INC:unidades-->
 <h2>¿Por qué el agua de {n} es así?</h2>
 {c["porque"]}
 <p>Si quieres entender la química de fondo, lo explicamos en <a href="que-es-la-dureza-del-agua.html">qué es la dureza del agua</a>.</p>

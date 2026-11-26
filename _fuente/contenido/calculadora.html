@@ -45,6 +45,7 @@
 <p style="font-size:.9rem;color:var(--suave);margin-bottom:0">Cálculo orientativo: suponemos que cada litro de resina retiene unos 5 ºf·m³ y que gasta unos 150 g de sal por litro en cada regeneración, valores habituales en equipos domésticos. Comprueba siempre la ficha técnica del fabricante.</p>
 </section>
 
+<!--INC:unidades-->
 <h2>Cómo se mide la dureza del agua</h2>
 <p>La dureza indica cuánto calcio y magnesio lleva disuelta el agua. Como hay varias formas de expresarla, la referencia común es el <strong>carbonato cálcico (CaCO₃)</strong>: se calcula cuánto CaCO₃ equivaldría a todo el calcio y el magnesio del agua y se da en miligramos por litro.</p>
 <p>En España lo más habitual son los <strong>grados franceses (ºf)</strong>. Un grado francés equivale a 10 mg/L de CaCO₃, así que un agua de 30 ºf tiene 300 mg/L. Los fabricantes alemanes de lavavajillas y cafeteras suelen usar <strong>grados alemanes (ºdH)</strong>, que son algo más grandes: 1 ºdH ≈ 1,78 ºf.</p>
@@ -68,6 +69,7 @@
 <div class="e4">Muy dura<small>más de 40 ºf</small></div>
 </div>
 
+<!--INC:descalcificador-->
 <h2>Cómo leer el resultado del descalcificador</h2>
 <p>Un descalcificador de intercambio iónico tiene una resina que atrapa el calcio y el magnesio. Cuando se satura, se "regenera" con salmuera (agua con sal) y vuelve a funcionar. Su tamaño depende de tres cosas: lo dura que es tu agua, cuánta agua gastáis y cada cuántos días quieres que se regenere.</p>
 <p>No hace falta dejar el agua a 0 ºf. Un agua totalmente descalcificada es más agresiva con las tuberías metálicas, por eso los equipos llevan una válvula de mezcla para dejar una <strong>dureza residual</strong>, normalmente entre 5 y 10 ºf. Por eso la calculadora te pide ese dato.</p>
@@ -91,6 +93,7 @@ function conv(){
  if(isNaN(v)||v<0){$("res1").innerHTML="Introduce un valor válido.";return}
  var mg=v*u,f=mg/10,c=clase(f);
  $("res1").innerHTML='<div class="grande">'+n(f)+' ºf</div><span class="chip" style="background:'+c[1]+'">'+c[0]+'</span><p style="margin:10px 0 0">'+c[2]+'</p>'+
+ '<div class="medidor" aria-hidden="true"><div class="marca"><b style="left:'+Math.min(f,60)/60*100+'%"></b></div><div class="zonas"><i class="c1" style="width:20%"></i><i class="c2" style="width:30%"></i><i class="c3" style="width:16.67%"></i><i class="c4" style="width:33.33%"></i></div><div class="escala-n"><span style="left:0">0</span><span style="left:20%">12</span><span style="left:50%">30</span><span style="left:66.7%">40</span><span style="right:0">60 ºf</span></div></div>'+
  '<div class="conv"><div><b>'+n(mg,0)+'</b><span>mg/L CaCO₃ (ppm)</span></div><div><b>'+n(mg/17.848)+'</b><span>ºdH (alemanes)</span></div><div><b>'+n(mg/14.254)+'</b><span>ºe (ingleses)</span></div><div><b>'+n(mg/100.09,2)+'</b><span>mmol/L</span></div></div>';
 }
 function desc(){

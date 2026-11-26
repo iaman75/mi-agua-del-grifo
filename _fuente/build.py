@@ -63,6 +63,7 @@ for f in sorted(SRC.glob("*.html")):
     txt = f.read_text(encoding="utf-8")
     meta = dict(re.findall(r"<!--(\w+):\s*(.*?)-->", txt.split("\n\n",1)[0]))
     cuerpo = re.sub(r"^(<!--\w+:.*?-->\s*)+", "", txt, flags=re.S)
+    cuerpo = re.sub(r"<!--INC:(\w+)-->", lambda m: (SRC/"inc"/(m.group(1)+".html")).read_text(encoding="utf-8"), cuerpo)
     if meta.get("tipo") == "articulo":
         meta["schema"] = ('<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article",'
             f'"headline":"{meta["title"].split(" | ")[0]}","description":"{meta["desc"]}",'

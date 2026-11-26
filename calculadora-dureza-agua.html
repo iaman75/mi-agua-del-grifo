@@ -62,6 +62,16 @@
 <p style="font-size:.9rem;color:var(--suave);margin-bottom:0">Cálculo orientativo: suponemos que cada litro de resina retiene unos 5 ºf·m³ y que gasta unos 150 g de sal por litro en cada regeneración, valores habituales en equipos domésticos. Comprueba siempre la ficha técnica del fabricante.</p>
 </section>
 
+<div class="unidades">
+<div class="unidades-t">¿Qué significan ºf y ºdH?</div>
+<div class="unidades-g">
+<div><b>ºf · grado francés</b><span>1 ºf = 10 mg de cal (CaCO₃) por litro. Es la unidad más usada en España.</span></div>
+<div><b>ºdH · grado alemán</b><span>1 ºdH ≈ 1,78 ºf. La piden muchos lavavajillas y las tiras reactivas.</span></div>
+<div><b>mg/L de CaCO₃</b><span>La unidad de los análisis de laboratorio. 300 mg/L = 30 ºf.</span></div>
+</div>
+<a href="calculadora-dureza-agua.html">Convierte entre unidades con la calculadora →</a>
+</div>
+
 <h2>Cómo se mide la dureza del agua</h2>
 <p>La dureza indica cuánto calcio y magnesio lleva disuelta el agua. Como hay varias formas de expresarla, la referencia común es el <strong>carbonato cálcico (CaCO₃)</strong>: se calcula cuánto CaCO₃ equivaldría a todo el calcio y el magnesio del agua y se da en miligramos por litro.</p>
 <p>En España lo más habitual son los <strong>grados franceses (ºf)</strong>. Un grado francés equivale a 10 mg/L de CaCO₃, así que un agua de 30 ºf tiene 300 mg/L. Los fabricantes alemanes de lavavajillas y cafeteras suelen usar <strong>grados alemanes (ºdH)</strong>, que son algo más grandes: 1 ºdH ≈ 1,78 ºf.</p>
@@ -84,6 +94,32 @@
 <div class="e3">Dura<small>30 – 40 ºf</small></div>
 <div class="e4">Muy dura<small>más de 40 ºf</small></div>
 </div>
+
+<figure class="figura">
+<svg viewBox="0 0 600 420" role="img" aria-label="Esquema de un descalcificador: la resina atrapa el calcio y el magnesio y suelta sodio">
+<defs><pattern id="bolas" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="9" cy="9" r="6.5" fill="#cfe3f0" stroke="#a9c9de"/></pattern></defs>
+<rect x="0" y="80" width="230" height="22" rx="4" fill="#cfdbe3"/>
+<g><circle cx="40" cy="91" r="10" fill="#c2852b"/><circle cx="85" cy="91" r="10" fill="#b84c3c"/><circle cx="130" cy="91" r="10" fill="#c2852b"/><circle cx="175" cy="91" r="10" fill="#c2852b"/></g>
+<text x="10" y="62" font-size="19" font-weight="700" fill="#073b5a">Entra agua dura</text>
+<rect x="225" y="60" width="130" height="290" rx="30" fill="url(#bolas)" stroke="#0b5d8c" stroke-width="4"/>
+<g fill="#c2852b"><circle cx="252" cy="95" r="6"/><circle cx="288" cy="88" r="6"/><circle cx="322" cy="100" r="6"/><circle cx="270" cy="122" r="6"/><circle cx="306" cy="128" r="6"/></g><g fill="#b84c3c"><circle cx="336" cy="120" r="5.5"/><circle cx="246" cy="140" r="5.5"/></g>
+<rect x="244" y="200" width="92" height="34" rx="17" fill="#0b5d8c"/><text x="290" y="223" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">Resina</text>
+<rect x="350" y="318" width="250" height="22" rx="4" fill="#cfdbe3"/>
+<g fill="#2aa5c9"><circle cx="400" cy="329" r="9"/><circle cx="440" cy="329" r="9"/><circle cx="480" cy="329" r="9"/><circle cx="520" cy="329" r="9"/><circle cx="560" cy="329" r="9"/></g>
+<text x="395" y="372" font-size="19" font-weight="700" fill="#073b5a">Sale agua blanda</text>
+<rect x="430" y="60" width="130" height="130" rx="14" fill="#fff" stroke="#9fb3c1" stroke-width="3"/>
+<path d="M440 178 L470 140 L490 160 L510 128 L550 178 Z" fill="#eef2f5" stroke="#cfd8df"/>
+<text x="495" y="95" text-anchor="middle" font-size="16" font-weight="700" fill="#073b5a">Depósito</text><text x="495" y="115" text-anchor="middle" font-size="16" font-weight="700" fill="#073b5a">de sal</text>
+<path d="M430 160 C400 170 380 190 362 210" fill="none" stroke="#0b5d8c" stroke-width="3" stroke-dasharray="7 6" marker-end="url(#fl)"/>
+<defs><marker id="fl" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#0b5d8c"/></marker></defs>
+<text x="366" y="268" font-size="17" fill="#0b5d8c">regeneración</text>
+<path d="M290 350 V400" stroke="#5b6b78" stroke-width="3" stroke-dasharray="6 6" marker-end="url(#fl2)"/>
+<defs><marker id="fl2" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#5b6b78"/></marker></defs>
+<text x="306" y="398" font-size="17" fill="#5b6b78">desagüe: se lleva la cal</text>
+<g font-size="17" fill="#33424e"><circle cx="20" cy="165" r="8" fill="#c2852b"/><text x="34" y="170">Calcio (Ca²⁺)</text><circle cx="20" cy="195" r="8" fill="#b84c3c"/><text x="34" y="200">Magnesio (Mg²⁺)</text><circle cx="20" cy="225" r="8" fill="#2aa5c9"/><text x="34" y="230">Sodio (Na⁺)</text></g>
+</svg>
+<figcaption>La resina atrapa el calcio y el magnesio y suelta sodio a cambio. Cuando se satura, el agua salada del depósito la "regenera" y arrastra la cal al desagüe.</figcaption>
+</figure>
 
 <h2>Cómo leer el resultado del descalcificador</h2>
 <p>Un descalcificador de intercambio iónico tiene una resina que atrapa el calcio y el magnesio. Cuando se satura, se "regenera" con salmuera (agua con sal) y vuelve a funcionar. Su tamaño depende de tres cosas: lo dura que es tu agua, cuánta agua gastáis y cada cuántos días quieres que se regenere.</p>
@@ -108,6 +144,7 @@ function conv(){
  if(isNaN(v)||v<0){$("res1").innerHTML="Introduce un valor válido.";return}
  var mg=v*u,f=mg/10,c=clase(f);
  $("res1").innerHTML='<div class="grande">'+n(f)+' ºf</div><span class="chip" style="background:'+c[1]+'">'+c[0]+'</span><p style="margin:10px 0 0">'+c[2]+'</p>'+
+ '<div class="medidor" aria-hidden="true"><div class="marca"><b style="left:'+Math.min(f,60)/60*100+'%"></b></div><div class="zonas"><i class="c1" style="width:20%"></i><i class="c2" style="width:30%"></i><i class="c3" style="width:16.67%"></i><i class="c4" style="width:33.33%"></i></div><div class="escala-n"><span style="left:0">0</span><span style="left:20%">12</span><span style="left:50%">30</span><span style="left:66.7%">40</span><span style="right:0">60 ºf</span></div></div>'+
  '<div class="conv"><div><b>'+n(mg,0)+'</b><span>mg/L CaCO₃ (ppm)</span></div><div><b>'+n(mg/17.848)+'</b><span>ºdH (alemanes)</span></div><div><b>'+n(mg/14.254)+'</b><span>ºe (ingleses)</span></div><div><b>'+n(mg/100.09,2)+'</b><span>mmol/L</span></div></div>';
 }
 function desc(){

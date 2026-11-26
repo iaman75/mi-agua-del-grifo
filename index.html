@@ -21,10 +21,29 @@
 <nav class="menu" aria-label="Principal"><a href="index.html" aria-current="page">Inicio</a><a href="calculadora-dureza-agua.html">Calculadora</a><a href="articulos.html">Artículos</a><a href="dureza-agua-por-ciudad.html">Ciudades</a><a href="sobre-nosotros.html">Sobre nosotros</a></nav>
 </div></header>
 <main>
-<section class="hero"><div class="contenedor">
+<section class="hero"><div class="contenedor hero-grid"><div>
 <h1>Entiende el agua que sale de tu grifo</h1>
 <p>Dureza, cal, sabor y calidad del agua en España, explicados de forma clara por un estudiante de Ingeniería Química con experiencia en tratamiento de aguas. Sin vender filtros.</p>
 <div class="botones"><a class="boton" href="calculadora-dureza-agua.html">Calcula la dureza de tu agua</a><a class="boton sec" href="articulos.html">Ver artículos</a></div>
+</div><svg class="hero-ilus" viewBox="0 0 400 340" role="img" aria-label="Ilustración de un grifo llenando un vaso de agua">
+<defs>
+<linearGradient id="gAgua" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fd0e6"/><stop offset="1" stop-color="#2aa5c9"/></linearGradient>
+<linearGradient id="gMetal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6eef3"/><stop offset="1" stop-color="#9fb3c1"/></linearGradient>
+</defs>
+<circle cx="230" cy="190" r="140" fill="#d6ecf6"/>
+<circle cx="330" cy="70" r="10" fill="#bfe3f0"/><circle cx="355" cy="105" r="6" fill="#bfe3f0"/><circle cx="90" cy="280" r="8" fill="#bfe3f0"/>
+<rect x="40" y="40" width="34" height="120" rx="8" fill="url(#gMetal)"/>
+<path d="M57 70 H200 a28 28 0 0 1 28 28 V118 H196 V102 H57 Z" fill="url(#gMetal)"/>
+<rect x="186" y="114" width="52" height="14" rx="4" fill="#7f97a8"/>
+<rect x="96" y="54" width="58" height="12" rx="6" fill="#0b5d8c"/><rect x="119" y="62" width="12" height="10" fill="#0b5d8c"/>
+<path d="M205 128 C205 160 219 160 219 128 Z" fill="url(#gAgua)"/>
+<rect x="205" y="128" width="14" height="100" fill="url(#gAgua)" opacity=".9"/>
+<path d="M150 200 L170 318 Q172 326 180 326 H244 Q252 326 254 318 L274 200 Z" fill="#ffffff" fill-opacity=".55" stroke="#9fb3c1" stroke-width="3"/>
+<path d="M159 252 L170 318 Q172 326 180 326 H244 Q252 326 254 318 L265 252 Z" fill="url(#gAgua)"/>
+<ellipse cx="212" cy="252" rx="53" ry="6" fill="#9fdcee"/>
+<circle cx="190" cy="285" r="4" fill="#fff" opacity=".8"/><circle cx="228" cy="300" r="3" fill="#fff" opacity=".8"/><circle cx="240" cy="276" r="2.5" fill="#fff" opacity=".8"/>
+<g transform="translate(286 150)"><rect width="92" height="54" rx="12" fill="#fff" stroke="#cfe1ec"/><text x="46" y="25" text-anchor="middle" font-size="20" font-weight="700" fill="#073b5a">25 ºf</text><text x="46" y="43" text-anchor="middle" font-size="12" fill="#5b6b78">dureza</text></g>
+</svg>
 </div></section>
 
 <section class="seccion"><div class="contenedor">
@@ -36,6 +55,35 @@
 <div class="e3">Dura<small>30 – 40 ºf</small></div>
 <div class="e4">Muy dura<small>más de 40 ºf</small></div>
 </div>
+<h3 style="margin:28px 0 4px;color:var(--azul-osc)">La dureza en las grandes ciudades</h3>
+<figure class="figura">
+<div class="barras">
+<div class="barra"><span>Madrid</span><div class="pista"><div class="relleno c1" style="width:10%">0–5</div></div></div>
+<div class="barra"><span>Málaga</span><div class="pista"><div class="relleno c1" style="width:20.2%">10,1</div></div></div>
+<div class="barra"><span>Sevilla</span><div class="pista"><div class="relleno c2" style="width:24%">12,0</div></div></div>
+<div class="barra"><span>Zaragoza</span><div class="pista"><div class="relleno c2" style="width:30.4%">15–21</div></div></div>
+<div class="barra"><span>Alicante</span><div class="pista"><div class="relleno c2" style="width:33.2%">16,6</div></div></div>
+<div class="barra"><span>Benidorm</span><div class="pista"><div class="relleno c2" style="width:41.6%">20,8</div></div></div>
+<div class="barra"><span>Alcoy</span><div class="pista"><div class="relleno c2" style="width:52.2%">26,1</div></div></div>
+<div class="barra"><span>Barcelona</span><div class="pista"><div class="relleno c2" style="width:53.4%">26,7</div></div></div>
+<div class="barra"><span>Murcia</span><div class="pista"><div class="relleno c2" style="width:55.6%">27,8</div></div></div>
+<div class="barra"><span>Elche</span><div class="pista"><div class="relleno c3" style="width:68.8%">34,4</div></div></div>
+<div class="barra"><span>Valencia</span><div class="pista"><div class="relleno c4" style="width:84%">42,0</div></div></div>
+</div>
+<div class="leyenda"><span><i class="c1"></i>Blanda</span><span><i class="c2"></i>Medianamente dura</span><span><i class="c3"></i>Dura</span><span><i class="c4"></i>Muy dura</span></div>
+<figcaption>Dureza en grados franceses (ºf) de la red principal de cada ciudad, según el último análisis oficial (SINAC, EMASESA, 2026). <a href="dureza-agua-por-ciudad.html">Ver todas las ciudades</a>.</figcaption>
+</figure>
+
+<div class="unidades">
+<div class="unidades-t">¿Qué significan ºf y ºdH?</div>
+<div class="unidades-g">
+<div><b>ºf · grado francés</b><span>1 ºf = 10 mg de cal (CaCO₃) por litro. Es la unidad más usada en España.</span></div>
+<div><b>ºdH · grado alemán</b><span>1 ºdH ≈ 1,78 ºf. La piden muchos lavavajillas y las tiras reactivas.</span></div>
+<div><b>mg/L de CaCO₃</b><span>La unidad de los análisis de laboratorio. 300 mg/L = 30 ºf.</span></div>
+</div>
+<a href="calculadora-dureza-agua.html">Convierte entre unidades con la calculadora →</a>
+</div>
+
 <p style="margin-top:16px"><a href="dureza-agua-por-ciudad.html"><strong>Consulta la dureza de tu ciudad →</strong></a><br><a href="como-saber-la-dureza-del-agua-de-mi-casa.html">¿No sabes la de tu casa? Te explicamos 5 formas de averiguarla →</a></p>
 </div></section>
 
