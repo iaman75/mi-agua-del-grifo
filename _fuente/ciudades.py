@@ -4,6 +4,7 @@ def cls(f):
     return "Blanda" if f<12 else "Medianamente dura" if f<30 else "Dura" if f<=40 else "Muy dura"
 def ff(mg): return f"{mg/10:.1f}".replace(".",",")
 def dh(mg): return f"{mg/17.848:.0f}"
+import sys
 CITIES=[
 dict(slug="madrid",nombre="Madrid",prov="Madrid",
  desc="¿El agua de Madrid es blanda? Dureza por distritos según los últimos análisis oficiales del SINAC (2026) y qué significa para tu lavavajillas y tu termo.",
@@ -66,6 +67,8 @@ dict(slug="benidorm",nombre="Benidorm",prov="Alicante",
  desc_txt="<strong>Opcional.</strong> Para 3 personas bastaría un equipo pequeño, de unos 8 litros de resina. En un apartamento de uso vacacional normalmente no compensa: es mejor limpiar la cal con ácido cítrico de vez en cuando.",
  extra=""),
 ]
+if len(sys.argv)>1:
+    exec(open(sys.argv[1]).read())
 for c in CITIES:
     s=c["slug"]; n=c["nombre"]
     has_pop=len(c["filas"][0])==4
@@ -85,13 +88,13 @@ for c in CITIES:
 <article class="articulo">
 <div class="migas"><a href="index.html">Inicio</a> › <a href="dureza-agua-por-ciudad.html">Dureza por ciudad</a> › {n}</div>
 <h1>Dureza del agua en {n}: datos oficiales 2026</h1>
-<p class="meta">Actualizado el 26 de noviembre de 2026 · Por Ismael · Datos: SINAC, Ministerio de Sanidad</p>
+<p class="meta">Actualizado el 26 de noviembre de 2026 · Por Ismael · Datos: {c.get("datos","SINAC, Ministerio de Sanidad")}</p>
 
 <div class="resumen"><strong>En resumen</strong>
 <ul>{res}</ul></div>
 
 <h2>Dureza del agua en {n} por redes</h2>
-<p>Estos son los últimos análisis de dureza que el SINAC, el sistema oficial del Ministerio de Sanidad, publica para las redes de agua de {n}:</p>
+<p>{c.get("intro_tabla", f"Estos son los últimos análisis de dureza que el SINAC, el sistema oficial del Ministerio de Sanidad, publica para las redes de agua de {n}:")}</p>
 <div class="tabla-scroll"><table>
 <thead>{head}</thead>
 <tbody>
@@ -114,7 +117,7 @@ for c in CITIES:
 <h2>Cómo saber a qué red pertenece tu casa</h2>
 <p>El agua de {n} la gestiona {c["gestor"]}. En el teléfono de tu factura o en su web pueden decirte qué red te abastece y darte los análisis más recientes. También puedes consultarlos tú en el SINAC: entra en "Acceso ciudadano", elige la provincia de {c["prov"]} y el municipio. Más opciones en <a href="como-saber-la-dureza-del-agua-de-mi-casa.html">cómo saber la dureza del agua de tu casa</a>.</p>
 
-<div class="fuentes"><strong>Fuentes:</strong> Ministerio de Sanidad, <a href="https://sinacv2.sanidad.gob.es/SinacV2/Index.do" rel="nofollow noopener">SINAC, redes de distribución de {n}</a> (consulta del 26/11/2026); Real Decreto 3/2023 (<a href="https://www.boe.es/buscar/act.php?id=BOE-A-2023-628" rel="nofollow noopener">BOE</a>); OCU, <a href="https://www.ocu.org/vivienda-y-energia/equipamiento-hogar/informe/dureza-del-agua" rel="nofollow noopener">Dureza del agua</a>.</div>
+<div class="fuentes"><strong>Fuentes:</strong> {c.get("fuentes_extra","")}Ministerio de Sanidad, <a href="https://sinacv2.sanidad.gob.es/SinacV2/Index.do" rel="nofollow noopener">SINAC, redes de distribución de {n}</a> (consulta del 26/11/2026); Real Decreto 3/2023 (<a href="https://www.boe.es/buscar/act.php?id=BOE-A-2023-628" rel="nofollow noopener">BOE</a>); OCU, <a href="https://www.ocu.org/vivienda-y-energia/equipamiento-hogar/informe/dureza-del-agua" rel="nofollow noopener">Dureza del agua</a>.</div>
 </article>
 <aside class="relacionados"><h2>Otras ciudades</h2><ul>
 <li><a href="dureza-agua-por-ciudad.html">Dureza del agua por ciudades</a></li>
